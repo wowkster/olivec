@@ -1,0 +1,29 @@
+[package]
+name = "olivec"
+version = "0.1.0"
+edition = "2021"
+description = "Safe Rusty wrapper for olive.c"
+license = "MIT"
+repository = "https://github.com/wowkster/olivec"
+categories = ["api-bindings", "graphics"]
+keywords = ["olivec", "graphics", "bindings", "wrapper"]
+readme = "README.md"
+include = ["assets/", "examples/", "src/"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "olivec"
+crate-type = ["staticlib", "rlib"]
+
+[dependencies]
+olivec-sys = { version = "0.1.0", git = "https://github.com/wowkster/olivec-sys.git" }
+
+[dev-dependencies]
+image = "0.24.6"
+
+[[example]]
+name = "flag_of_japan"
+
+[[example]]
+name = "subcanvas"
